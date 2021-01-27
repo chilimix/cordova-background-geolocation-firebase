@@ -33,10 +33,12 @@
                 <param name="onload" value="true"/>
             </feature>
         </config-file>
+        
+        <preference name="FIREBASE_CORE_POD_VERSION" default="6.33.0" />
+        <preference name="FIREBASE_FIRESTORE_POD_VERSION" default="6.33.0" />
 
-        <framework src="Firebase/Core" type="podspec" spec="" />
-        <framework src="Firebase/Firestore" type="podspec" spec="" />
-
+        <framework src="Firebase/Core" type="podspec" spec="$FIREBASE_CORE_POD_VERSION" />
+        <framework src="Firebase/Firestore" type="podspec" spec="$FIREBASE_FIRESTORE_POD_VERSION" />
 
         <source-file src="src/ios/CDVBackgroundGeolocationFirebase.m" />
         <header-file src="src/ios/CDVBackgroundGeolocationFirebase.h" />
